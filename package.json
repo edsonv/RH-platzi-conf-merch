@@ -10,6 +10,11 @@
     "lint": "eslint src/ --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test && npm lint"
+    }
+  },
   "keywords": [],
   "author": "Edson J Vargas <edson.jhair@yahoo.com>",
   "license": "MIT",
@@ -33,6 +38,7 @@
     "eslint-plugin-react": "^7.28.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
     "mini-css-extract-plugin": "^2.5.3",
     "prettier": "^2.5.1",
     "sass": "^1.49.7",
