@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/components/Information.css';
 
 function Information() {
@@ -25,9 +26,11 @@ function Information() {
           <button type="button" className="Information-back">
             Regresar
           </button>
-          <button type='button' className="Information-next">
-            Pagar
-          </button>
+          <Link to="/checkout/payment">
+            <button type='button' className="Information-next">
+              Pagar
+            </button>
+          </Link>
         </div>
       </div>
       <div className="Information-sidebar">
