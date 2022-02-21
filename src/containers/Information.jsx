@@ -58,7 +58,7 @@ function Information() {
         <h3>Pedido:</h3>
         {
           cart.map(item => (
-            <div className="Information-item">
+            <div className="Information-item" key={item.id}>
               <div className="Information-element">
                 <h4>{item.title}</h4>
                 <span>${item.price}</span>
