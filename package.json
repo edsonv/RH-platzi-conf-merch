@@ -8,7 +8,9 @@
     "build": "webpack --mode production",
     "format": "prettier --write \"{*.js,src/**/*.(js|jsx)}\"",
     "lint": "eslint src/ --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pre-deploy": "npm run build",
+    "deploy": "gh-pages -D dist"
   },
   "husky": {
     "hooks": {
@@ -21,6 +23,7 @@
   "dependencies": {
     "@react-google-maps/api": "^2.7.0",
     "axios": "^0.26.0",
+    "gh-pages": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
